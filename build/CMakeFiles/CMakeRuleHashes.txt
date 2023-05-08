@@ -1,0 +1,19 @@
+# Hashes of file build rules.
+471e660d3b9355dc8b366b3ed173407b CMakeFiles/everything
+471e660d3b9355dc8b366b3ed173407b CMakeFiles/package_all
+471e660d3b9355dc8b366b3ed173407b CMakeFiles/package_default
+471e660d3b9355dc8b366b3ed173407b CMakeFiles/package_tar_gz
+471e660d3b9355dc8b366b3ed173407b CMakeFiles/package_tar_xz
+471e660d3b9355dc8b366b3ed173407b CMakeFiles/package_zip
+471e660d3b9355dc8b366b3ed173407b CMakeFiles/tools
+5d44cdbf8f355ba2c7a7be824a82bc1d src/game/generated/client_data.cpp
+4aa438832867631993095af00bc20de8 src/game/generated/client_data.h
+4cae0f15918acaa4688996af4ce0724e src/game/generated/git_revision.cpp
+c21eb37cd22f5cf8752a709ac22f1a4a src/game/generated/nethash.cpp
+f03a4de372bc4cf992f800ca49063d1d src/game/generated/protocol.cpp
+f7677c1ac4828f8ad4ed460324dfe9f0 src/game/generated/protocol.h
+5f061987a1608cb1386f4ccd4481e0a3 src/game/generated/server_data.cpp
+29511bac2601677150ea8d1410f9006b src/game/generated/server_data.h
+cfa8ec8e3ea4479b5efbc1ed1dd1590e teeworlds-0.6.5-linux_x86_64.tar.gz
+c250044310cea1f80ae3114d7456e0de teeworlds-0.6.5-linux_x86_64.tar.xz
+732c8737b92fa403cf1715b4871c8459 teeworlds-0.6.5-linux_x86_64.zip
