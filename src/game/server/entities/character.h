@@ -117,8 +117,8 @@ private:
 
 	int m_Health;
 	int m_Armor;
-	int m_MaxHealth = 50;
-	int m_MaxArmor = 25;
+	int m_MaxHealth = 30;
+	int m_MaxArmor = 5;
 
 	// ninja
 	struct

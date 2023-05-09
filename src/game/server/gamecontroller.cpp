@@ -342,32 +342,89 @@ void IGameController::OnPlayerInfoChange(class CPlayer *pP)
 
 int IGameController::OnCharacterDeath(class CCharacter *pVictim, class CPlayer *pKiller, int Weapon)
 {
+	int mScoreToBeAdded = 0;
+	char aBufKB[64] = {}; //Killed Bounty
+
+	pKiller->m_bScore++;
+	
 	// do scoreing
 	if(!pKiller || Weapon == WEAPON_GAME)
 		return 0;
-	if(pKiller == pVictim->GetPlayer())
-		pVictim->GetPlayer()->m_Score--; // suicide
-	else
+	if(!(pKiller == pVictim->GetPlayer()))
 	{
-		if(IsTeamplay() && pVictim->GetPlayer()->GetTeam() == pKiller->GetTeam())
-			pKiller->m_Score--; // teamkill
-		else
-			pKiller->m_Score++; // normal kill
+		if(!(IsTeamplay() && pVictim->GetPlayer()->GetTeam() == pKiller->GetTeam()))
+		{
+			if(pKiller->m_bScore >= 5) //Killer has bounty
+			{
+				if(pVictim->GetPlayer()->m_bScore >= 5)
+				{
+					mScoreToBeAdded = pKiller->m_bScore/4 + pVictim->GetPlayer()->m_bScore; // bounty kill another bounty
+					str_format(aBufKB, sizeof(aBufKB), "'%s' has claimed the bounty (%ix) of '%s'", Server()->ClientName(pKiller->GetCID()),
+																								pVictim->GetPlayer()->m_bScore,
+																								Server()->ClientName(pVictim->GetPlayer()->GetCID()));
+				}
+				else
+				{
+					mScoreToBeAdded = pKiller->m_bScore/4;	// default bounty kill on non bounty
+				}
+			
+				{ //Change killers clan to their bounty
+					char aBuf[64];
+					str_format(aBuf, sizeof(aBuf), "%ix BOUNTY", pKiller->m_bScore);
+					Server()->SetClientClan(pKiller->GetCID(), aBuf);		
+				}
+			}
+			else
+			{
+				if(pVictim->GetPlayer()->m_bScore >= 5){
+					mScoreToBeAdded = 1 + pVictim->GetPlayer()->m_bScore;
+					str_format(aBufKB, sizeof(aBufKB), "'%s' has claimed the bounty (%ix) of '%s'", Server()->ClientName(pKiller->GetCID()),
+																								pVictim->GetPlayer()->m_bScore,
+																								Server()->ClientName(pVictim->GetPlayer()->GetCID()));
+				}
+				else
+				{
+					mScoreToBeAdded = 1;
+				}
+			}
+
+			if(pKiller->m_bScore%5==0){ // Announce it to all chat every %5 bounties
+				char aBuf[64];
+				str_format(aBuf, sizeof(aBuf), "'%s' has now a bounty of %i!", Server()->ClientName(pKiller->GetCID()), 
+																				pKiller->m_bScore);
+				GameServer()->SendChat(-1, CGameContext::CHAT_ALL, aBuf);
+			}
+
+			if(aBufKB!=nullptr)
+				GameServer()->SendChat(-1, CGameContext::CHAT_ALL, aBufKB);
+
+			pKiller->m_Score += mScoreToBeAdded;
+			Server()->SetClientClan(pVictim->GetPlayer()->GetCID(), "");
+			pVictim->GetPlayer()->m_bScore = 0;
+
+		}
 	}
 	if(Weapon == WEAPON_SELF)
 		pVictim->GetPlayer()->m_RespawnTick = Server()->Tick()+Server()->TickSpeed()*3.0f;
+
+
+	pVictim->GetPlayer()->m_bScore = 0; //Reset bounty
+	Server()->SetClientClan(pVictim->GetPlayer()->GetCID(), "");
+
 	return 0;
+
 }
 
 void IGameController::OnCharacterSpawn(class CCharacter *pChr)
 {
 	// default health
-	pChr->IncreaseHealth(10);
+	pChr->IncreaseHealth(pChr->GetMaxHealth()/3);
 
 	// give default weapons
 	pChr->GiveWeapon(WEAPON_HAMMER, -1);
 	pChr->GiveWeapon(WEAPON_GUN, 10);
-	pChr->GiveWeapon(WEAPON_GRENADE, 51	);
+
+	pChr->GetPlayer()->m_bScore = 0; //Respawned player has no bounty points
 }
 
 void IGameController::DoWarmup(int Seconds)
