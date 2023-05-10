@@ -26,7 +26,6 @@ public:
 
 	void Tick();
 	void PostTick();
-	void DisplayStats();
 	void Snap(int SnappingClient);
 
 	void OnDirectInput(CNetObj_PlayerInput *NewInput);
@@ -77,7 +76,6 @@ public:
 	int m_DieTick;
 
 	int m_Score;
-	int m_bScore = 0; //bounty score
 
 	int m_ScoreStartTick;
 	bool m_ForceBalanced;
@@ -99,6 +97,11 @@ public:
 		int m_Min;
 		int m_Max;
 	} m_Latency;
+
+	//Hunt
+	void DisplayStats();
+	int m_bScore = 0; //bounty score
+
 
 private:
 	CCharacter *m_pCharacter;

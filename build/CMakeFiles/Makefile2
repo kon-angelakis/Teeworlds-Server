@@ -180,9 +180,9 @@ CMakeFiles/game-shared.dir/clean:
 # Target rules for target CMakeFiles/teeworlds.dir
 
 # All Build rule for target.
+CMakeFiles/teeworlds.dir/all: CMakeFiles/engine-shared.dir/all
 CMakeFiles/teeworlds.dir/all: CMakeFiles/game-shared.dir/all
 CMakeFiles/teeworlds.dir/all: CMakeFiles/md5.dir/all
-CMakeFiles/teeworlds.dir/all: CMakeFiles/engine-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds.dir/build.make CMakeFiles/teeworlds.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds.dir/build.make CMakeFiles/teeworlds.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target teeworlds"
@@ -208,9 +208,9 @@ CMakeFiles/teeworlds.dir/clean:
 # Target rules for target CMakeFiles/teeworlds_srv.dir
 
 # All Build rule for target.
+CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/engine-shared.dir/all
 CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/game-shared.dir/all
 CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/md5.dir/all
-CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/engine-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds_srv.dir/build.make CMakeFiles/teeworlds_srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds_srv.dir/build.make CMakeFiles/teeworlds_srv.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=79,80,81,82,83,84,85,86,87,88,89,90,91,92,93 "Built target teeworlds_srv"
@@ -236,8 +236,8 @@ CMakeFiles/teeworlds_srv.dir/clean:
 # Target rules for target CMakeFiles/mastersrv.dir
 
 # All Build rule for target.
-CMakeFiles/mastersrv.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/mastersrv.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/mastersrv.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mastersrv.dir/build.make CMakeFiles/mastersrv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mastersrv.dir/build.make CMakeFiles/mastersrv.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=35,36 "Built target mastersrv"
@@ -263,8 +263,8 @@ CMakeFiles/mastersrv.dir/clean:
 # Target rules for target CMakeFiles/versionsrv.dir
 
 # All Build rule for target.
-CMakeFiles/versionsrv.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/versionsrv.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/versionsrv.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/versionsrv.dir/build.make CMakeFiles/versionsrv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/versionsrv.dir/build.make CMakeFiles/versionsrv.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=99,100 "Built target versionsrv"
@@ -290,8 +290,8 @@ CMakeFiles/versionsrv.dir/clean:
 # Target rules for target CMakeFiles/crapnet.dir
 
 # All Build rule for target.
-CMakeFiles/crapnet.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/crapnet.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/crapnet.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crapnet.dir/build.make CMakeFiles/crapnet.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crapnet.dir/build.make CMakeFiles/crapnet.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=1 "Built target crapnet"
@@ -317,8 +317,8 @@ CMakeFiles/crapnet.dir/clean:
 # Target rules for target CMakeFiles/dilate.dir
 
 # All Build rule for target.
-CMakeFiles/dilate.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/dilate.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/dilate.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dilate.dir/build.make CMakeFiles/dilate.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dilate.dir/build.make CMakeFiles/dilate.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=2 "Built target dilate"
@@ -344,8 +344,8 @@ CMakeFiles/dilate.dir/clean:
 # Target rules for target CMakeFiles/fake_server.dir
 
 # All Build rule for target.
-CMakeFiles/fake_server.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/fake_server.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/fake_server.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_server.dir/build.make CMakeFiles/fake_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_server.dir/build.make CMakeFiles/fake_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=25 "Built target fake_server"
@@ -371,8 +371,8 @@ CMakeFiles/fake_server.dir/clean:
 # Target rules for target CMakeFiles/map_resave.dir
 
 # All Build rule for target.
-CMakeFiles/map_resave.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/map_resave.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/map_resave.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map_resave.dir/build.make CMakeFiles/map_resave.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map_resave.dir/build.make CMakeFiles/map_resave.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=32,33 "Built target map_resave"
@@ -398,8 +398,8 @@ CMakeFiles/map_resave.dir/clean:
 # Target rules for target CMakeFiles/map_version.dir
 
 # All Build rule for target.
-CMakeFiles/map_version.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/map_version.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/map_version.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map_version.dir/build.make CMakeFiles/map_version.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map_version.dir/build.make CMakeFiles/map_version.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=34 "Built target map_version"
@@ -425,8 +425,8 @@ CMakeFiles/map_version.dir/clean:
 # Target rules for target CMakeFiles/packetgen.dir
 
 # All Build rule for target.
-CMakeFiles/packetgen.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/packetgen.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/packetgen.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/packetgen.dir/build.make CMakeFiles/packetgen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/packetgen.dir/build.make CMakeFiles/packetgen.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=39,40 "Built target packetgen"
@@ -452,8 +452,8 @@ CMakeFiles/packetgen.dir/clean:
 # Target rules for target CMakeFiles/tileset_borderadd.dir
 
 # All Build rule for target.
-CMakeFiles/tileset_borderadd.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/tileset_borderadd.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/tileset_borderadd.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderadd.dir/build.make CMakeFiles/tileset_borderadd.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderadd.dir/build.make CMakeFiles/tileset_borderadd.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=94 "Built target tileset_borderadd"
@@ -479,8 +479,8 @@ CMakeFiles/tileset_borderadd.dir/clean:
 # Target rules for target CMakeFiles/tileset_borderfix.dir
 
 # All Build rule for target.
-CMakeFiles/tileset_borderfix.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/tileset_borderfix.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/tileset_borderfix.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderfix.dir/build.make CMakeFiles/tileset_borderfix.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderfix.dir/build.make CMakeFiles/tileset_borderfix.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=95 "Built target tileset_borderfix"
@@ -506,8 +506,8 @@ CMakeFiles/tileset_borderfix.dir/clean:
 # Target rules for target CMakeFiles/tileset_borderrem.dir
 
 # All Build rule for target.
-CMakeFiles/tileset_borderrem.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/tileset_borderrem.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/tileset_borderrem.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderrem.dir/build.make CMakeFiles/tileset_borderrem.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderrem.dir/build.make CMakeFiles/tileset_borderrem.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=96,97 "Built target tileset_borderrem"
@@ -533,8 +533,8 @@ CMakeFiles/tileset_borderrem.dir/clean:
 # Target rules for target CMakeFiles/tileset_borderset.dir
 
 # All Build rule for target.
-CMakeFiles/tileset_borderset.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/tileset_borderset.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/tileset_borderset.dir/all: CMakeFiles/md5.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderset.dir/build.make CMakeFiles/tileset_borderset.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tileset_borderset.dir/build.make CMakeFiles/tileset_borderset.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=98 "Built target tileset_borderset"
@@ -560,16 +560,16 @@ CMakeFiles/tileset_borderset.dir/clean:
 # Target rules for target CMakeFiles/tools.dir
 
 # All Build rule for target.
+CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderrem.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderset.dir/all
+CMakeFiles/tools.dir/all: CMakeFiles/dilate.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/fake_server.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/map_resave.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/map_version.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/packetgen.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderadd.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderfix.dir/all
-CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderrem.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/crapnet.dir/all
-CMakeFiles/tools.dir/all: CMakeFiles/dilate.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tools.dir/build.make CMakeFiles/tools.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tools.dir/build.make CMakeFiles/tools.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num= "Built target tools"
@@ -595,22 +595,22 @@ CMakeFiles/tools.dir/clean:
 # Target rules for target CMakeFiles/everything.dir
 
 # All Build rule for target.
+CMakeFiles/everything.dir/all: CMakeFiles/engine-shared.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/game-shared.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/teeworlds.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderrem.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderset.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/dilate.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/fake_server.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/map_resave.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/map_version.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/packetgen.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderadd.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderfix.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderrem.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/teeworlds_srv.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/mastersrv.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/versionsrv.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/crapnet.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/dilate.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/engine-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/everything.dir/build.make CMakeFiles/everything.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/everything.dir/build.make CMakeFiles/everything.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num= "Built target everything"

@@ -10,7 +10,12 @@ class CGameControllerMOD : public IGameController
 {
 public:
 	CGameControllerMOD(class CGameContext *pGameServer);
+
+	void OnCharacterSpawn(class CCharacter *pChr);
+	int OnCharacterDeath(class CCharacter *pVictim, class CPlayer *pKiller, int Weapon);
+	
 	virtual void Tick();
-	// add more virtual functions here if you wish
+    // add more virtual functions here if you wish
 };
+
 #endif

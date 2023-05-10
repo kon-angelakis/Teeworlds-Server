@@ -69,6 +69,8 @@ include CMakeFiles/game-shared.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/game-shared.dir/flags.make
 
+src/game/generated/git_revision.cpp: ../.git/index
+src/game/generated/git_revision.cpp: ../.git/logs/HEAD
 src/game/generated/git_revision.cpp: ../scripts/git_revision.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating src/game/generated/git_revision.cpp"
 	cd /home/kostas/Desktop/Teeworlds && /home/kostas/anaconda3/bin/python scripts/git_revision.py > /home/kostas/Desktop/Teeworlds/build/src/game/generated/git_revision.cpp

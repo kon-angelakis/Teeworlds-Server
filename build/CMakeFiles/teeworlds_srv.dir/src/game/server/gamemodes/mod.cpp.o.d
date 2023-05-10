@@ -1,10 +1,12 @@
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.cpp \
  /usr/include/stdc-predef.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
- /home/kostas/Desktop/Teeworlds/src/base/vmath.h \
- /usr/include/c++/11/math.h /usr/include/c++/11/cmath \
+ /home/kostas/Desktop/Teeworlds/src/engine/shared/config.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/shared/config_variables.h \
+ /home/kostas/Desktop/Teeworlds/src/././game/variables.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entity.h \
+ /usr/include/c++/11/new \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -16,6 +18,9 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
  /usr/include/c++/11/pstl/pstl_config.h \
+ /usr/include/c++/11/bits/exception.h \
+ /home/kostas/Desktop/Teeworlds/src/base/vmath.h \
+ /usr/include/c++/11/math.h /usr/include/c++/11/cmath \
  /usr/include/c++/11/bits/cpp_type_traits.h \
  /usr/include/c++/11/ext/type_traits.h /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -87,4 +92,36 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h \
+ /home/kostas/Desktop/Teeworlds/src/game/gamecore.h \
+ /home/kostas/Desktop/Teeworlds/src/base/system.h \
+ /home/kostas/Desktop/Teeworlds/src/base/detect.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /home/kostas/Desktop/Teeworlds/src/base/math.h \
+ /usr/include/c++/11/stdlib.h /usr/include/c++/11/cstdlib \
+ /home/kostas/Desktop/Teeworlds/src/game/collision.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/shared/protocol.h \
+ /home/kostas/Desktop/Teeworlds/build/src/game/generated/protocol.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/message.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/shared/packer.h \
+ /home/kostas/Desktop/Teeworlds/src/game/tuning.h \
+ /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/server.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/kernel.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/message.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/console.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/shared/memheap.h \
+ /home/kostas/Desktop/Teeworlds/src/game/layers.h \
+ /home/kostas/Desktop/Teeworlds/src/engine/map.h \
+ /home/kostas/Desktop/Teeworlds/src/game/mapitems.h \
+ /home/kostas/Desktop/Teeworlds/src/game/voting.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/eventhandler.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h

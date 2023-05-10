@@ -1224,7 +1224,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: ../src/game/serv
   ../src/game/server/gamecontroller.h \
   ../src/game/server/gamemodes/tdm.h \
   ../src/game/server/gamemodes/ctf.h \
-  ../src/game/server/gamemodes/mod.h
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/player.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o: ../src/game/server/gamecontroller.cpp \
   /usr/include/stdc-predef.h \
@@ -1602,11 +1603,12 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o: ../src/game/ser
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: ../src/game/server/gamemodes/mod.cpp \
   /usr/include/stdc-predef.h \
-  ../src/game/server/gamemodes/mod.h \
-  ../src/game/server/gamecontroller.h \
-  ../src/base/vmath.h \
-  /usr/include/c++/11/math.h \
-  /usr/include/c++/11/cmath \
+  ../src/engine/shared/config.h \
+  ../src/engine/shared/config_variables.h \
+  ../src/game/variables.h \
+  ../src/game/server/entities/character.h \
+  ../src/game/server/entity.h \
+  /usr/include/c++/11/new \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -1619,6 +1621,10 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: ../src/game/se
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/exception.h \
+  ../src/base/vmath.h \
+  /usr/include/c++/11/math.h \
+  /usr/include/c++/11/cmath \
   /usr/include/c++/11/bits/cpp_type_traits.h \
   /usr/include/c++/11/ext/type_traits.h \
   /usr/include/math.h \
@@ -1697,7 +1703,41 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: ../src/game/se
   /usr/include/c++/11/tr1/modified_bessel_func.tcc \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11/tr1/riemann_zeta.tcc
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../src/game/server/gameworld.h \
+  ../src/game/gamecore.h \
+  ../src/base/system.h \
+  ../src/base/detect.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  ../src/base/math.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/c++/11/cstdlib \
+  ../src/game/collision.h \
+  ../src/engine/shared/protocol.h \
+  src/game/generated/protocol.h \
+  ../src/engine/message.h \
+  ../src/engine/shared/packer.h \
+  ../src/game/tuning.h \
+  src/game/generated/server_data.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h \
+  ../src/game/server/gamecontext.h \
+  ../src/engine/server.h \
+  ../src/engine/kernel.h \
+  ../src/engine/message.h \
+  ../src/engine/console.h \
+  ../src/engine/shared/memheap.h \
+  ../src/game/layers.h \
+  ../src/engine/map.h \
+  ../src/game/mapitems.h \
+  ../src/game/voting.h \
+  ../src/game/server/eventhandler.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/gameworld.h \
+  ../src/game/server/player.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o: ../src/game/server/gamemodes/tdm.cpp \
   /usr/include/stdc-predef.h \
