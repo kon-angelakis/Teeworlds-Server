@@ -73,7 +73,6 @@ void CPlayer::Tick()
 			if(m_pCharacter->IsAlive())
 			{
 				m_ViewPos = m_pCharacter->m_Pos;
-				DisplayStats();
 			}
 			else
 			{
@@ -290,14 +289,4 @@ void CPlayer::TryRespawn()
 	m_pCharacter = new(m_ClientID) CCharacter(&GameServer()->m_World);
 	m_pCharacter->Spawn(this, SpawnPos);
 	GameServer()->CreatePlayerSpawn(SpawnPos);
-}
-
-void CPlayer::DisplayStats()
-{
-	char aBuf[64];
-	str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i", m_pCharacter->GetHealth(),
-													m_pCharacter->GetMaxHealth(),
-													m_pCharacter->GetArmor(),
-													m_pCharacter->GetMaxArmor());
-	GameServer()->SendBroadcast(aBuf, m_ClientID);
 }

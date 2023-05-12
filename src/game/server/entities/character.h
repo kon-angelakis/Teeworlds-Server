@@ -54,11 +54,7 @@ public:
 	bool Remove();
 
 	bool IncreaseHealth(int Amount);
-	int GetHealth() const { return m_Health; }
-	int GetMaxHealth() const { return m_MaxHealth; }
 	bool IncreaseArmor(int Amount);
-	int GetArmor() const { return m_Armor; }
-	int GetMaxArmor() const { return m_MaxArmor; }
 
 	bool GiveWeapon(int Weapon, int Ammo);
 	void GiveNinja();
@@ -117,8 +113,6 @@ private:
 
 	int m_Health;
 	int m_Armor;
-	int m_MaxHealth = 30;
-	int m_MaxArmor = 5;
 
 	// ninja
 	struct
@@ -136,6 +130,8 @@ private:
 	int m_ReckoningTick; // tick that we are performing dead reckoning From
 	CCharacterCore m_SendCore; // core that we should send
 	CCharacterCore m_ReckoningCore; // the dead reckoning core
+
+	friend class CGameControllerMOD;
 
 };
 

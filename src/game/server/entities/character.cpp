@@ -645,17 +645,17 @@ void CCharacter::TickPaused()
 
 bool CCharacter::IncreaseHealth(int Amount)
 {
-	if(m_Health >= m_MaxHealth)
+	if(m_Health >= m_pPlayer->m_MaxHealth)
 		return false;
-	m_Health = clamp(m_Health+Amount, 0, m_MaxHealth);
+	m_Health = clamp(m_Health+Amount, 0, m_pPlayer->m_MaxHealth);
 	return true;
 }
 
 bool CCharacter::IncreaseArmor(int Amount)
 {
-	if(m_Armor >= m_MaxArmor)
+	if(m_Armor >= m_pPlayer->m_MaxArmor)
 		return false;
-	m_Armor = clamp(m_Armor+Amount, 0, m_MaxArmor);
+	m_Armor = clamp(m_Armor+Amount, 0, m_pPlayer->m_MaxArmor);
 	return true;
 }
 

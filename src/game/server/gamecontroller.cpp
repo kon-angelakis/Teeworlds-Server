@@ -406,7 +406,7 @@ void IGameController::TogglePause()
 bool IGameController::IsFriendlyFire(int ClientID1, int ClientID2)
 {
 	if(ClientID1 == ClientID2) //Return true=NoFF
-		return true;
+		return false;
 
 	if(IsTeamplay())
 	{

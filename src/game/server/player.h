@@ -99,9 +99,10 @@ public:
 	} m_Latency;
 
 	//Hunt
-	void DisplayStats();
 	int m_bScore = 0; //bounty score
-
+	int m_MaxHealth = 10;
+	int m_MaxArmor = 10;
+	int m_Killstreak = -1;
 
 private:
 	CCharacter *m_pCharacter;
@@ -114,6 +115,8 @@ private:
 	bool m_Spawning;
 	int m_ClientID;
 	int m_Team;
+
+	friend class CGameControllerMOD;
 };
 
 #endif

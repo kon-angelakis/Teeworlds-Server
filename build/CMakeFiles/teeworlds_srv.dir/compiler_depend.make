@@ -1225,7 +1225,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: ../src/game/serv
   ../src/game/server/gamemodes/tdm.h \
   ../src/game/server/gamemodes/ctf.h \
   ../src/game/server/gamemodes/mod.h \
-  ../src/game/server/player.h
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o: ../src/game/server/gamecontroller.cpp \
   /usr/include/stdc-predef.h \
