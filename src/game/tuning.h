@@ -28,7 +28,7 @@ MACRO_TUNING_PARAM(GunCurvature, gun_curvature, 1.25f)
 MACRO_TUNING_PARAM(GunSpeed, gun_speed, 2200.0f)
 MACRO_TUNING_PARAM(GunLifetime, gun_lifetime, 2.0f)
 
-MACRO_TUNING_PARAM(ShotgunCurvature, shotgun_curvature, 0.0f) //Default is 1.25
+MACRO_TUNING_PARAM(ShotgunCurvature, shotgun_curvature, 1.25f) //Default is 1.25
 MACRO_TUNING_PARAM(ShotgunSpeed, shotgun_speed, 2750.0f) //Default is 2750
 MACRO_TUNING_PARAM(ShotgunSpeeddiff, shotgun_speeddiff, 0.8f)
 MACRO_TUNING_PARAM(ShotgunLifetime, shotgun_lifetime, 0.20f) //Default is 0.20

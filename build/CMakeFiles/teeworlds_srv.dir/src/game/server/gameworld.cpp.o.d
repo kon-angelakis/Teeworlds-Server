@@ -116,4 +116,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entity.h \
- /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
+ /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h

@@ -9,6 +9,7 @@
 
 #include <game/gamecore.h>
 
+
 enum
 {
 	WEAPON_GAME = -3, // team switching etc
@@ -65,6 +66,9 @@ public:
 	class CPlayer *GetPlayer() { return m_pPlayer; }
 
 private:
+
+	friend class CGameControllerMOD;
+	friend class CProjectile;
 	// player controlling this character
 	class CPlayer *m_pPlayer;
 
@@ -113,6 +117,15 @@ private:
 
 	int m_Health;
 	int m_Armor;
+		
+	//Hunt
+	int m_bScore = 0; //bounty score
+	int m_MaxHealth = 10;
+	int m_MaxArmor = 10;
+	int m_Killstreak = 1;
+	int m_NextKillstreak = 5;
+	int m_DamageMult = 1;
+	int m_TimeToRemoveMult; //50ticks * seconds
 
 	// ninja
 	struct
@@ -130,8 +143,6 @@ private:
 	int m_ReckoningTick; // tick that we are performing dead reckoning From
 	CCharacterCore m_SendCore; // core that we should send
 	CCharacterCore m_ReckoningCore; // the dead reckoning core
-
-	friend class CGameControllerMOD;
 
 };
 

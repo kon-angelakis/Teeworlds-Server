@@ -98,11 +98,7 @@ public:
 		int m_Max;
 	} m_Latency;
 
-	//Hunt
-	int m_bScore = 0; //bounty score
-	int m_MaxHealth = 10;
-	int m_MaxArmor = 10;
-	int m_Killstreak = -1;
+
 
 private:
 	CCharacter *m_pCharacter;

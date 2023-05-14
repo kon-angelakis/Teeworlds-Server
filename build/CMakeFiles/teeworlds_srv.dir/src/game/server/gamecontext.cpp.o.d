@@ -121,13 +121,14 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/entity.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h \
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h \
  /home/kostas/Desktop/Teeworlds/src/game/version.h \
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/nethash.cpp \
  /home/kostas/Desktop/Teeworlds/src/game/collision.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/dm.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/tdm.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/ctf.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h

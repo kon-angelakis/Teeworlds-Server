@@ -15,6 +15,8 @@
 #include "gameworld.h"
 #include "player.h"
 
+#include <game/server/gamemodes/mod.h>
+
 /*
 	Tick
 		Game Context (CGameContext::tick)
@@ -174,6 +176,7 @@ public:
 	virtual const char *GameType();
 	virtual const char *Version();
 	virtual const char *NetVersion();
+
 };
 
 inline int CmaskAll() { return -1; }

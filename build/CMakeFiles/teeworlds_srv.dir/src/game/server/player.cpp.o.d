@@ -119,4 +119,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/voting.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/eventhandler.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h

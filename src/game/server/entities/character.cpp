@@ -4,6 +4,7 @@
 #include <engine/shared/config.h>
 #include <game/server/gamecontext.h>
 #include <game/mapitems.h>
+#include <game/server/gamemodes/mod.h>
 
 #include "character.h"
 #include "laser.h"
@@ -244,6 +245,8 @@ void CCharacter::HandleWeaponSwitch()
 
 void CCharacter::FireWeapon()
 {
+
+
 	if(m_ReloadTimer != 0)
 		return;
 
@@ -285,6 +288,12 @@ void CCharacter::FireWeapon()
 	{
 		case WEAPON_HAMMER:
 		{
+			
+			if(IsControllerHunt(GameServer())){
+				((CGameControllerMOD*)GameServer()->m_pController)->FireHammer(m_pPlayer->GetCharacter());
+				m_ReloadTimer = Server()->TickSpeed()*1.5f;
+				break;
+			}
 			// reset objects Hit
 			m_NumObjectsHit = 0;
 			GameServer()->CreateSound(m_Pos, SOUND_HAMMER_FIRE);
@@ -331,7 +340,7 @@ void CCharacter::FireWeapon()
 				ProjStartPos,
 				Direction,
 				(int)(Server()->TickSpeed()*GameServer()->Tuning()->m_GunLifetime),
-				100, 0, 0, -1, WEAPON_GUN);
+				1, 0, 0, -1, WEAPON_GUN);
 
 			GameServer()->CreateSound(m_Pos, SOUND_GUN_FIRE);
 		} break;
@@ -398,6 +407,7 @@ void CCharacter::FireWeapon()
 	if(!m_ReloadTimer)
 		m_ReloadTimer = g_pData->m_Weapons.m_aId[m_ActiveWeapon].m_Firedelay * Server()->TickSpeed() / 1000;
 }
+
 
 void CCharacter::HandleWeapons()
 {
@@ -645,17 +655,17 @@ void CCharacter::TickPaused()
 
 bool CCharacter::IncreaseHealth(int Amount)
 {
-	if(m_Health >= m_pPlayer->m_MaxHealth)
+	if(m_Health >= m_MaxHealth)
 		return false;
-	m_Health = clamp(m_Health+Amount, 0, m_pPlayer->m_MaxHealth);
+	m_Health = clamp(m_Health+Amount, 0, m_MaxHealth);
 	return true;
 }
 
 bool CCharacter::IncreaseArmor(int Amount)
 {
-	if(m_Armor >= m_pPlayer->m_MaxArmor)
+	if(m_Armor >= m_MaxArmor)
 		return false;
-	m_Armor = clamp(m_Armor+Amount, 0, m_pPlayer->m_MaxArmor);
+	m_Armor = clamp(m_Armor+Amount, 0, m_MaxArmor);
 	return true;
 }
 

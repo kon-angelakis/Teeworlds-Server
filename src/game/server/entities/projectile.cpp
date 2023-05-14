@@ -14,7 +14,10 @@ CProjectile::CProjectile(CGameWorld *pGameWorld, int Type, int Owner, vec2 Pos, 
 	m_LifeSpan = Span;
 	m_Owner = Owner;
 	m_Force = Force;
-	m_Damage = Damage;
+	if(IsControllerHunt(GameServer()))
+		m_Damage = Damage * GameServer()->GetPlayerChar(Owner)->m_DamageMult;
+	else
+		m_Damage = Damage;
 	m_SoundImpact = SoundImpact;
 	m_Weapon = Weapon;
 	m_StartTick = Server()->Tick();
@@ -78,7 +81,7 @@ void CProjectile::Tick()
 		else if(TargetChr)
 			TargetChr->TakeDamage(m_Direction * max(0.001f, m_Force), m_Damage, m_Owner, m_Weapon);
 
-		GameServer()->m_World.DestroyEntity(this);
+		GameServer()->m_World.DestroyEntity(this); //Commenting this out could lead to interesting killstreaks
 	}
 }
 

@@ -13,7 +13,7 @@ CGameControllerMOD::CGameControllerMOD(class CGameContext *pGameServer)
 {
 	// Exchange this to a string that identifies your game mode.
 	// DM, TDM and CTF are reserved for teeworlds original modes.
-	m_pGameType = "Hunt";
+	m_pGameType = "HUNT";
 
 	//m_GameFlags = GAMEFLAG_TEAMS; // GAMEFLAG_TEAMS makes it a two-team gamemode
 }
@@ -23,7 +23,7 @@ void CGameControllerMOD::Tick()
 	// this is the main part of the gamemode, this function is run every tick
 	IGameController::Tick();
 	StatsTick();
-	
+	KillstreakTick();	
 }
 
 void CGameControllerMOD::StatsTick()
@@ -32,45 +32,55 @@ void CGameControllerMOD::StatsTick()
 		if(GameServer()->IsClientReady(i) && GameServer()->m_apPlayers[i]->m_pCharacter
 			&& GameServer()->m_apPlayers[i]->m_pCharacter->IsAlive())
 		{
-			DisplayStats(GameServer()->GetPlayerChar(i)->GetPlayer());
+			DisplayStats(GameServer()->GetPlayerChar(i));
 		}
 	}
 }
 
-
-void CGameControllerMOD::DisplayStats(class CPlayer *pPlayer)
+void CGameControllerMOD::DisplayStats(class CCharacter *pChr)
 {
 	char aBuf[64];
-	switch (pPlayer->m_Killstreak)
+	switch (pChr->m_Killstreak)
 	{
-	case -1:
-		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup:- ", pPlayer->m_pCharacter->m_Health,
-													pPlayer->m_MaxHealth,
-													pPlayer->m_pCharacter->m_Armor,
-													pPlayer->m_MaxArmor);
+	case NO_KILLSTREAK:
+		if(pChr->m_DamageMult != 1) //If damage ks is active
+		{
+			str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: DAMAGE UP ACTIVE %i ", pChr->m_Health,
+														pChr->m_MaxHealth,
+														pChr->m_Armor,
+														pChr->m_MaxArmor,
+														pChr->m_TimeToRemoveMult - Server()->Tick()/50);
+			break;
+		}else
+		{
+			str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: -", pChr->m_Health,
+														pChr->m_MaxHealth,
+														pChr->m_Armor,
+														pChr->m_MaxArmor);
+			break;
+		}
+	case MEDKIT:
+		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: MEDKIT", pChr->m_Health,
+													pChr->m_MaxHealth,
+													pChr->m_Armor,
+													pChr->m_MaxArmor);
 		break;
-	case 0:
-		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: HEAL", pPlayer->m_pCharacter->m_Health,
-													pPlayer->m_MaxHealth,
-													pPlayer->m_pCharacter->m_Armor,
-													pPlayer->m_MaxArmor);
+	case DAMAGE_UP:
+		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: DAMAGE UP", pChr->m_Health,
+													pChr->m_MaxHealth,
+													pChr->m_Armor,
+													pChr->m_MaxArmor);
 		break;
-	case 1:
-		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: DAMAGE+", pPlayer->m_pCharacter->m_Health,
-													pPlayer->m_MaxHealth,
-													pPlayer->m_pCharacter->m_Armor,
-													pPlayer->m_MaxArmor);
-		break;
-	case 2:
-		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: AIRSTRIKE", pPlayer->m_pCharacter->m_Health,
-													pPlayer->m_MaxHealth,
-													pPlayer->m_pCharacter->m_Armor,
-													pPlayer->m_MaxArmor);
+	case AIRSTRIKE:
+		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: AIRSTRIKE", pChr->m_Health,
+													pChr->m_MaxHealth,
+													pChr->m_Armor,
+													pChr->m_MaxArmor);
 		break;
 	default:
 		break;
 	}
-	GameServer()->SendBroadcast(aBuf, pPlayer->m_ClientID);
+	GameServer()->SendBroadcast(aBuf, pChr->GetPlayer()->GetCID());
 	
 }
 
@@ -78,8 +88,7 @@ void CGameControllerMOD::OnCharacterSpawn(class CCharacter *pChr)
 {
 	//IGameController::OnCharacterSpawn(pChr);
 	// default health
-	pChr->IncreaseHealth(pChr->GetPlayer()->m_MaxHealth/3);
-	pChr->GetPlayer()->m_bScore = 0; //(Re)Spawned player has no bounty points
+	pChr->IncreaseHealth(pChr->m_MaxHealth);
 
 	pChr->GiveWeapon(WEAPON_HAMMER, -1);
 	pChr->GiveWeapon(WEAPON_GUN, 10);
@@ -92,7 +101,7 @@ int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlaye
 	
 	int mScoreToBeAdded = 0;
 	char aBufKB[64] = {}; //Killed Bounty
-	pKiller->m_bScore++;
+	pKiller->m_pCharacter->m_bScore++;
 	
 	// do scoreing
 	if(!pKiller || Weapon == WEAPON_GAME)
@@ -101,32 +110,32 @@ int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlaye
 	{
 		if(!(IsTeamplay() && pVictim->GetPlayer()->GetTeam() == pKiller->GetTeam()))
 		{
-			if(pKiller->m_bScore >= 5) //Killer has bounty
+			if(pKiller->m_pCharacter->m_bScore >= 5) //Killer has bounty
 			{
-				if(pVictim->GetPlayer()->m_bScore >= 5)
+				if(pVictim->GetPlayer()->m_pCharacter->m_bScore >= 5)
 				{
-					mScoreToBeAdded = pKiller->m_bScore/4 + pVictim->GetPlayer()->m_bScore; // bounty kill another bounty
+					mScoreToBeAdded = pKiller->m_pCharacter->m_bScore/4 + pVictim->m_bScore; // bounty kill another bounty
 					str_format(aBufKB, sizeof(aBufKB), "'%s' has claimed the bounty (%ix) of '%s'", Server()->ClientName(pKiller->GetCID()),
-																								pVictim->GetPlayer()->m_bScore,
+																								pVictim->m_bScore,
 																								Server()->ClientName(pVictim->GetPlayer()->GetCID()));
 				}
 				else
 				{
-					mScoreToBeAdded = pKiller->m_bScore/4;	// default bounty kill on non bounty
+					mScoreToBeAdded = pKiller->m_pCharacter->m_bScore/4;	// default bounty kill on non bounty
 				}
 			
 				{ //Change killers clan to their bounty
 					char aBuf[64];
-					str_format(aBuf, sizeof(aBuf), "%ix BOUNTY", pKiller->m_bScore);
+					str_format(aBuf, sizeof(aBuf), "%ix BOUNTY", pKiller->m_pCharacter->m_bScore);
 					Server()->SetClientClan(pKiller->GetCID(), aBuf);		
 				}
 			}
 			else
 			{
-				if(pVictim->GetPlayer()->m_bScore >= 5){
-					mScoreToBeAdded = 1 + pVictim->GetPlayer()->m_bScore;
+				if(pVictim->m_bScore >= 5){
+					mScoreToBeAdded = 1 + pVictim->m_bScore;
 					str_format(aBufKB, sizeof(aBufKB), "'%s' has claimed the bounty (%ix) of '%s'", Server()->ClientName(pKiller->GetCID()),
-																								pVictim->GetPlayer()->m_bScore,
+																								pVictim->m_bScore,
 																								Server()->ClientName(pVictim->GetPlayer()->GetCID()));
 				}
 				else
@@ -135,10 +144,10 @@ int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlaye
 				}
 			}
 
-			if(pKiller->m_bScore%5==0){ // Announce it to all chat every %5 bounties
+			if(pKiller->m_pCharacter->m_bScore%5==0){ // Announce it to all chat every %5 bounties
 				char aBuf[64];
 				str_format(aBuf, sizeof(aBuf), "'%s' has now a bounty of %i!", Server()->ClientName(pKiller->GetCID()), 
-																				pKiller->m_bScore);
+																				pKiller->m_pCharacter->m_bScore);
 				GameServer()->SendChat(-1, CGameContext::CHAT_ALL, aBuf);
 			}
 
@@ -147,7 +156,7 @@ int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlaye
 
 			pKiller->m_Score += mScoreToBeAdded;
 			Server()->SetClientClan(pVictim->GetPlayer()->GetCID(), "");
-			pVictim->GetPlayer()->m_bScore = 0;
+			pVictim->m_bScore = 0;
 
 		}
 	}
@@ -155,36 +164,107 @@ int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlaye
 		pVictim->GetPlayer()->m_RespawnTick = Server()->Tick()+Server()->TickSpeed()*3.0f;
 
 
-	pVictim->GetPlayer()->m_bScore = 0; //Reset bounty
+	pVictim->m_bScore = 0; //Reset bounty
 	Server()->SetClientClan(pVictim->GetPlayer()->GetCID(), "");
 
-	if(pKiller->m_bScore >= 5)
-		CGameControllerMOD::CheckForKillstreak(pKiller);
+	if(pKiller->m_pCharacter->m_bScore >= 5)
+		CGameControllerMOD::CheckForKillstreak(pKiller->m_pCharacter);
 
 	return 0;
 
 }
 
-void CGameControllerMOD::CheckForKillstreak(class CPlayer *pPlayer)
+void CGameControllerMOD::CheckForKillstreak(class CCharacter *pChr)
 {
+
 	char aBuf[64]={};
-	switch (pPlayer->m_bScore)
+	if(pChr->m_bScore % pChr->m_NextKillstreak == 0)
 	{
-	case 5:
-		str_format(aBuf, sizeof(aBuf), "You got (HEAL). Use it with your hammer.");
-		pPlayer->m_Killstreak = KS_HEAL;
+		pChr->m_Killstreak++;
+		pChr->m_NextKillstreak += 5;
+
+		switch (pChr->m_Killstreak)
+		{
+		case 0:
+			str_format(aBuf, sizeof(aBuf), "You got a 'MEDKIT'. Use it with your hammer.");
+			break;
+		case 1:
+			str_format(aBuf, sizeof(aBuf), "You got 'DAMAGE UP'. Use it with your hammer.");
+			break;
+		case 2:
+		str_format(aBuf, sizeof(aBuf), "You got an 'AIRSTRIKE'. Use it with your hammer.");
+			break;
+		default:
+			break;
+		}
+
+	}
+
+	if(pChr->m_Killstreak > AIRSTRIKE) //No more killsteak powers
+		pChr->m_Killstreak = AIRSTRIKE;
+
+	if(aBuf != nullptr)
+		GameServer()->SendChatTarget(pChr->GetPlayer()->GetCID(), aBuf);
+}
+
+void CGameControllerMOD::ActivateKillstreak(class CCharacter *pChr, int KillStr)
+{
+	switch (KillStr)
+	{
+	case MEDKIT:
+		pChr->IncreaseHealth(pChr->m_MaxHealth/1.3f);
+		pChr->m_Armor = pChr->m_MaxArmor;
 		break;
-	case 10:
-		str_format(aBuf, sizeof(aBuf), "You got (DAMAGE+). Use it with your hammer.");
-		pPlayer->m_Killstreak = KS_DAMAGE;
+	case DAMAGE_UP:
+		pChr->m_DamageMult = 2;
+		pChr->m_TimeToRemoveMult = Server()->Tick() + 50 * 10; //Current tick + 10 second(*50 ticks/s)
 		break;
-	case 15:
-		str_format(aBuf, sizeof(aBuf), "You got (AIRSTRIKE). Use it with your hammer.");
-		pPlayer->m_Killstreak = KS_AIRSTRIKE;
+	case AIRSTRIKE:
+
 		break;
 	default:
 		break;
 	}
-	if(aBuf != nullptr)
-		GameServer()->SendChatTarget(pPlayer->GetCID(), aBuf);
+	pChr->m_Killstreak = NO_KILLSTREAK; //reset
+	pChr->m_NextKillstreak = pChr->m_bScore + 5;
+}
+
+void CGameControllerMOD::KillstreakTick()
+{
+	for(int i=0;i<MAX_CLIENTS;i++){
+		if(GameServer()->IsClientReady(i) && GameServer()->m_apPlayers[i]->m_pCharacter
+			&& GameServer()->m_apPlayers[i]->m_pCharacter->IsAlive())
+		{
+			if(GameServer()->GetPlayerChar(i)->m_DamageMult != 1 
+				&& Server()->Tick() % GameServer()->GetPlayerChar(i)->m_TimeToRemoveMult==0)
+					GameServer()->GetPlayerChar(i)->m_DamageMult = 1;	
+		}
+	}
+}
+
+void CGameControllerMOD::FireHammer(class CCharacter *pChr){
+	char aBuf[64];
+	switch (pChr->m_Killstreak)
+	{
+	case NO_KILLSTREAK:
+		str_format(aBuf, sizeof(aBuf), "You do not have a powerup available");
+		break;
+	case MEDKIT:
+		str_format(aBuf, sizeof(aBuf), "Activated 'MEDKIT'!");
+		break;
+	case DAMAGE_UP:
+		str_format(aBuf, sizeof(aBuf), "Activated 'DAMAGE_UP'!");
+		break;
+	case AIRSTRIKE:
+		str_format(aBuf, sizeof(aBuf), "Activated 'AIRSTRIKE'!");
+		break;
+	default:
+		break;
+	}
+
+	GameServer()->SendChatTarget(pChr->GetPlayer()->GetCID(), aBuf);
+	if(pChr->m_Killstreak == NO_KILLSTREAK)
+		return;
+	ActivateKillstreak(pChr, pChr->m_Killstreak);
+
 }

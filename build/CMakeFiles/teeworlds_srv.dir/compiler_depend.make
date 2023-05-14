@@ -284,6 +284,10 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o: ../src/ga
   ../src/game/server/entity.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h \
   ../src/game/server/gamecontext.h \
   ../src/game/server/entities/character.h \
   ../src/game/server/entities/laser.h \
@@ -419,6 +423,10 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/flag.cpp.o: ../src/game/se
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h \
   ../src/game/server/gamecontext.h \
   ../src/game/server/entities/flag.h
 
@@ -552,6 +560,10 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o: ../src/game/s
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h \
   ../src/game/server/gamecontext.h \
   ../src/game/server/entities/laser.h
 
@@ -685,6 +697,10 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/pickup.cpp.o: ../src/game/
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h \
   ../src/game/server/gamecontext.h \
   ../src/game/server/entities/pickup.h
 
@@ -818,6 +834,10 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.o: ../src/g
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h \
   ../src/game/server/gamecontext.h \
   ../src/game/server/entities/projectile.h
 
@@ -951,7 +971,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o: ../src/game/server/en
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
   ../src/game/server/entity.h \
-  src/game/generated/server_data.h
+  src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o: ../src/game/server/eventhandler.cpp \
   /usr/include/stdc-predef.h \
@@ -1082,7 +1106,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o: ../src/game/ser
   /usr/include/c++/11/new \
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
-  src/game/generated/server_data.h
+  src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: ../src/game/server/gamecontext.cpp \
   /usr/include/stdc-predef.h \
@@ -1217,16 +1245,17 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: ../src/game/serv
   ../src/game/server/entity.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h \
   ../src/game/version.h \
   src/game/generated/nethash.cpp \
   ../src/game/collision.h \
   ../src/game/server/gamemodes/dm.h \
-  ../src/game/server/gamecontroller.h \
   ../src/game/server/gamemodes/tdm.h \
   ../src/game/server/gamemodes/ctf.h \
-  ../src/game/server/gamemodes/mod.h \
-  ../src/game/server/player.h \
-  ../src/game/server/entities/character.h
+  ../src/game/server/gamemodes/mod.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o: ../src/game/server/gamecontroller.cpp \
   /usr/include/stdc-predef.h \
@@ -1361,7 +1390,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o: ../src/game/s
   ../src/game/server/gameworld.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
-  src/game/generated/server_data.h
+  src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: ../src/game/server/gamemodes/ctf.cpp \
   /usr/include/stdc-predef.h \
@@ -1483,7 +1516,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: ../src/game/se
   ../src/engine/shared/packer.h \
   ../src/game/tuning.h \
   src/game/generated/server_data.h \
-  ../src/game/server/entities/flag.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
   ../src/game/server/gamecontext.h \
@@ -1499,9 +1533,9 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: ../src/game/se
   ../src/game/server/gamecontroller.h \
   ../src/game/server/gameworld.h \
   ../src/game/server/player.h \
+  ../src/game/server/entities/flag.h \
   ../src/game/server/gamecontext.h \
-  ../src/game/server/gamemodes/ctf.h \
-  ../src/game/server/gamecontroller.h
+  ../src/game/server/gamemodes/ctf.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o: ../src/game/server/gamemodes/dm.cpp \
   /usr/include/stdc-predef.h \
@@ -1738,7 +1772,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: ../src/game/se
   ../src/game/server/gameworld.h \
   ../src/game/server/player.h \
   ../src/game/server/gamemodes/mod.h \
-  ../src/game/server/gamecontroller.h
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/gamemodes/mod.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o: ../src/game/server/gamemodes/tdm.cpp \
   /usr/include/stdc-predef.h \
@@ -1875,8 +1910,9 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o: ../src/game/se
   ../src/game/server/gamecontroller.h \
   ../src/game/server/gameworld.h \
   ../src/game/server/player.h \
-  ../src/game/server/gamemodes/tdm.h \
-  ../src/game/server/gamecontroller.h
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/gamemodes/tdm.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o: ../src/game/server/gameworld.cpp \
   /usr/include/stdc-predef.h \
@@ -2008,7 +2044,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o: ../src/game/server
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
   ../src/game/server/entity.h \
-  src/game/generated/server_data.h
+  src/game/generated/server_data.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o: ../src/game/server/player.cpp \
   /usr/include/stdc-predef.h \
@@ -2142,7 +2182,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o: ../src/game/server/pl
   ../src/game/voting.h \
   ../src/game/server/eventhandler.h \
   ../src/game/server/gamecontroller.h \
-  ../src/game/server/gameworld.h
+  ../src/game/server/gameworld.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
+  ../src/game/server/player.h \
+  ../src/game/server/entities/character.h
 
 
 ../src/game/server/player.cpp:
@@ -2152,8 +2196,6 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o: ../src/game/server/pl
 ../src/game/server/gamemodes/dm.cpp:
 
 ../src/game/server/gamemodes/ctf.cpp:
-
-../src/game/server/gamemodes/mod.h:
 
 src/game/generated/nethash.cpp:
 
@@ -2170,6 +2212,8 @@ src/game/generated/nethash.cpp:
 ../src/game/server/gamecontroller.cpp:
 
 ../src/game/server/entities/projectile.h:
+
+../src/game/server/gamemodes/mod.h:
 
 ../src/game/server/entity.h:
 

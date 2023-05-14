@@ -123,5 +123,6 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/tdm.h \
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/tdm.h

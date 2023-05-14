@@ -116,4 +116,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/entity.h \
  /usr/include/c++/11/new /usr/include/c++/11/bits/exception.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h \
- /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
+ /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
