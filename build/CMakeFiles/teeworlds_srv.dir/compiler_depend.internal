@@ -288,11 +288,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o
  /home/kostas/Desktop/Teeworlds/src/game/server/entity.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/laser.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.h
@@ -428,11 +428,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/flag.cpp.o
  /usr/include/c++/11/bits/exception.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/flag.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o
@@ -566,11 +566,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o
  /usr/include/c++/11/bits/exception.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/laser.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entities/pickup.cpp.o
@@ -704,11 +704,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/pickup.cpp.o
  /usr/include/c++/11/bits/exception.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/pickup.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.o
@@ -842,11 +842,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.o
  /usr/include/c++/11/bits/exception.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o
@@ -1529,8 +1529,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o
  /home/kostas/Desktop/Teeworlds/src/engine/shared/packer.h
  /home/kostas/Desktop/Teeworlds/src/game/tuning.h
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.h
- /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h
- /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/flag.h
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
@@ -1546,7 +1545,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.h
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h
- /home/kostas/Desktop/Teeworlds/src/game/server/entities/flag.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h
+ /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/ctf.h
 

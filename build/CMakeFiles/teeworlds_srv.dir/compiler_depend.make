@@ -284,11 +284,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o: ../src/ga
   ../src/game/server/entity.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamecontext.h \
   ../src/game/server/gamemodes/mod.h \
   ../src/game/server/gamecontroller.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
-  ../src/game/server/gamecontext.h \
   ../src/game/server/entities/character.h \
   ../src/game/server/entities/laser.h \
   ../src/game/server/entities/projectile.h
@@ -423,11 +423,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/flag.cpp.o: ../src/game/se
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamecontext.h \
   ../src/game/server/gamemodes/mod.h \
   ../src/game/server/gamecontroller.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
-  ../src/game/server/gamecontext.h \
   ../src/game/server/entities/flag.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o: ../src/game/server/entities/laser.cpp \
@@ -560,11 +560,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o: ../src/game/s
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamecontext.h \
   ../src/game/server/gamemodes/mod.h \
   ../src/game/server/gamecontroller.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
-  ../src/game/server/gamecontext.h \
   ../src/game/server/entities/laser.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entities/pickup.cpp.o: ../src/game/server/entities/pickup.cpp \
@@ -697,11 +697,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/pickup.cpp.o: ../src/game/
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamecontext.h \
   ../src/game/server/gamemodes/mod.h \
   ../src/game/server/gamecontroller.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
-  ../src/game/server/gamecontext.h \
   ../src/game/server/entities/pickup.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.o: ../src/game/server/entities/projectile.cpp \
@@ -834,11 +834,11 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.o: ../src/g
   /usr/include/c++/11/bits/exception.h \
   ../src/game/server/gameworld.h \
   src/game/generated/server_data.h \
+  ../src/game/server/gamecontext.h \
   ../src/game/server/gamemodes/mod.h \
   ../src/game/server/gamecontroller.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
-  ../src/game/server/gamecontext.h \
   ../src/game/server/entities/projectile.h
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o: ../src/game/server/entity.cpp \
@@ -1516,8 +1516,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: ../src/game/se
   ../src/engine/shared/packer.h \
   ../src/game/tuning.h \
   src/game/generated/server_data.h \
-  ../src/game/server/gamemodes/mod.h \
-  ../src/game/server/gamecontroller.h \
+  ../src/game/server/entities/flag.h \
   ../src/game/server/player.h \
   ../src/game/server/entities/character.h \
   ../src/game/server/gamecontext.h \
@@ -1533,7 +1532,8 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: ../src/game/se
   ../src/game/server/gamecontroller.h \
   ../src/game/server/gameworld.h \
   ../src/game/server/player.h \
-  ../src/game/server/entities/flag.h \
+  ../src/game/server/gamemodes/mod.h \
+  ../src/game/server/gamecontroller.h \
   ../src/game/server/gamecontext.h \
   ../src/game/server/gamemodes/ctf.h
 

@@ -49,7 +49,7 @@ void CGameControllerMOD::DisplayStats(class CCharacter *pChr)
 														pChr->m_MaxHealth,
 														pChr->m_Armor,
 														pChr->m_MaxArmor,
-														pChr->m_TimeToRemoveMult - Server()->Tick()/50);
+														(pChr->m_TimeToRemoveMult - Server()->Tick())/50);
 			break;
 		}else
 		{
