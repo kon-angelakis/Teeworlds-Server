@@ -290,7 +290,7 @@ void CCharacter::FireWeapon()
 		{
 			
 			if(IsControllerHunt(GameServer())){
-				((CGameControllerMOD*)GameServer()->m_pController)->FireHammer(m_pPlayer->GetCharacter());
+				((CGameControllerMOD*)GameServer()->m_pController)->HandleHammer(m_pPlayer->GetCharacter());
 				m_ReloadTimer = Server()->TickSpeed()*1.5f;
 				break;
 			}
@@ -340,7 +340,7 @@ void CCharacter::FireWeapon()
 				ProjStartPos,
 				Direction,
 				(int)(Server()->TickSpeed()*GameServer()->Tuning()->m_GunLifetime),
-				1, 0, 0, -1, WEAPON_GUN);
+				25, 0, 0, -1, WEAPON_GUN);
 
 			GameServer()->CreateSound(m_Pos, SOUND_GUN_FIRE);
 		} break;
@@ -668,7 +668,6 @@ bool CCharacter::IncreaseArmor(int Amount)
 	m_Armor = clamp(m_Armor+Amount, 0, m_MaxArmor);
 	return true;
 }
-
 
 void CCharacter::Die(int Killer, int Weapon)
 {

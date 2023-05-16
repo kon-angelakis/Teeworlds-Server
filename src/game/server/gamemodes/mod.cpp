@@ -5,8 +5,8 @@
 #include <game/server/entities/character.h>
 #include <game/server/player.h>
 
-
 #include "mod.h"
+
 
 CGameControllerMOD::CGameControllerMOD(class CGameContext *pGameServer)
 : IGameController(pGameServer)
@@ -49,7 +49,7 @@ void CGameControllerMOD::DisplayStats(class CCharacter *pChr)
 														pChr->m_MaxHealth,
 														pChr->m_Armor,
 														pChr->m_MaxArmor,
-														(pChr->m_TimeToRemoveMult - Server()->Tick())/50);
+														(pChr->m_TimeToRemoveMult - Server()->Tick())/SERVER_TICK_SPEED);
 			break;
 		}else
 		{
@@ -207,42 +207,56 @@ void CGameControllerMOD::CheckForKillstreak(class CCharacter *pChr)
 		GameServer()->SendChatTarget(pChr->GetPlayer()->GetCID(), aBuf);
 }
 
-void CGameControllerMOD::ActivateKillstreak(class CCharacter *pChr, int KillStr)
+int CGameControllerMOD::ActivatedKillstreak(class CCharacter *pChr)
 {
+	int KillStr = pChr->m_Killstreak;
 	switch (KillStr)
 	{
 	case MEDKIT:
-		pChr->IncreaseHealth(pChr->m_MaxHealth/1.3f);
-		pChr->m_Armor = pChr->m_MaxArmor;
+		pChr->IncreaseHealth(pChr->m_MaxHealth/1.2f);
+		pChr->IncreaseArmor(4);
 		break;
 	case DAMAGE_UP:
 		pChr->m_DamageMult = 2;
-		pChr->m_TimeToRemoveMult = Server()->Tick() + 50 * 10; //Current tick + 10 second(*50 ticks/s)
+		pChr->m_TimeToRemoveMult = Server()->Tick() + SecondsToTick(10); //Current tick + 10 seconds
 		break;
 	case AIRSTRIKE:
+		vec2 Direction = normalize(vec2(0, AIRSTRIKE_SPEED));
+		for(int i = -AIRSTRIKE_AMOUNT/2; i <= AIRSTRIKE_AMOUNT/2; i++){
+			vec2 ProjStartPos = pChr->m_Pos + vec2(i * AIRSTRIKE_SPACING, AIRSTRIKE_HEIGHT - abs(i * AIRSTRIKE_HEIGHT));
+			CProjectile *pProj = new CProjectile(pChr->m_pGameWorld, WEAPON_GRENADE,
+					pChr->m_pPlayer->GetCID(),
+					ProjStartPos,
+					Direction,
+					(int)(Server()->TickSpeed()*GameServer()->Tuning()->m_GrenadeLifetime),
+					1, true, 0, SOUND_GRENADE_EXPLODE, WEAPON_GRENADE);
 
+		}
 		break;
-	default:
-		break;
+
 	}
-	pChr->m_Killstreak = NO_KILLSTREAK; //reset
+	//pChr->m_Killstreak = NO_KILLSTREAK; //reset
 	pChr->m_NextKillstreak = pChr->m_bScore + 5;
+
+	return KillStr; //return which ks was activated
+
 }
 
 void CGameControllerMOD::KillstreakTick()
 {
 	for(int i=0;i<MAX_CLIENTS;i++){
 		if(GameServer()->IsClientReady(i) && GameServer()->m_apPlayers[i]->m_pCharacter
-			&& GameServer()->m_apPlayers[i]->m_pCharacter->IsAlive())
+			&& GameServer()->m_apPlayers[i]->m_pCharacter->IsAlive()) //If character exists
 		{
 			if(GameServer()->GetPlayerChar(i)->m_DamageMult != 1 
 				&& Server()->Tick() % GameServer()->GetPlayerChar(i)->m_TimeToRemoveMult==0)
-					GameServer()->GetPlayerChar(i)->m_DamageMult = 1;	
+					GameServer()->GetPlayerChar(i)->m_DamageMult = 1; //Reset once dmg+ time is up
 		}
 	}
 }
 
-void CGameControllerMOD::FireHammer(class CCharacter *pChr){
+void CGameControllerMOD::HandleHammer(class CCharacter *pChr)
+{
 	char aBuf[64];
 	switch (pChr->m_Killstreak)
 	{
@@ -250,13 +264,13 @@ void CGameControllerMOD::FireHammer(class CCharacter *pChr){
 		str_format(aBuf, sizeof(aBuf), "You do not have a powerup available");
 		break;
 	case MEDKIT:
-		str_format(aBuf, sizeof(aBuf), "Activated 'MEDKIT'!");
+		str_format(aBuf, sizeof(aBuf), "You used a 'MEDKIT'!");
 		break;
 	case DAMAGE_UP:
 		str_format(aBuf, sizeof(aBuf), "Activated 'DAMAGE_UP'!");
 		break;
 	case AIRSTRIKE:
-		str_format(aBuf, sizeof(aBuf), "Activated 'AIRSTRIKE'!");
+		str_format(aBuf, sizeof(aBuf), "You deployed an 'AIRSTRIKE'!");
 		break;
 	default:
 		break;
@@ -265,6 +279,6 @@ void CGameControllerMOD::FireHammer(class CCharacter *pChr){
 	GameServer()->SendChatTarget(pChr->GetPlayer()->GetCID(), aBuf);
 	if(pChr->m_Killstreak == NO_KILLSTREAK)
 		return;
-	ActivateKillstreak(pChr, pChr->m_Killstreak);
+	ActivatedKillstreak(pChr);
 
 }

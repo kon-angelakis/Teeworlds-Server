@@ -5,9 +5,18 @@
 #include <game/server/gamecontroller.h>
 #include <game/server/player.h>
 #include <game/server/entities/character.h>
+#include <game/server/entity.h>
+#include <game/server/entities/projectile.h>
 
 //==HUNT
 #define IsControllerHunt(GameServer) (*((int*)GameServer->GameType()) == 0x544e5548)
+#define SecondsToTick(sec) (int)(SERVER_TICK_SPEED * sec)
+
+#define AIRSTRIKE_HEIGHT -300
+#define AIRSTRIKE_SPEED 1
+#define AIRSTRIKE_AMOUNT 15 //Better be an odd number so it splits in half(center: player)
+#define AIRSTRIKE_SPACING 110
+
 
 
 // you can subclass GAMECONTROLLER_CTF, GAMECONTROLLER_TDM etc if you want
@@ -16,9 +25,6 @@ class CGameControllerMOD : public IGameController
 {
 	friend class CPlayer;
 	friend class CCharacter;
-
-
-
 
 
 	void DisplayStats(class CCharacter *pChr);
@@ -41,10 +47,13 @@ public:
 	bool IsFriendlyFire(int ClientID1, int ClientID2) { return false; }
 
 	void CheckForKillstreak(class CCharacter *pChr);
-	void ActivateKillstreak(class CCharacter *pChr, int KillStr);
+	int ActivatedKillstreak(class CCharacter *pChr);
 	void KillstreakTick();
 
-	void FireHammer(class CCharacter *pChr);
+	void HandleHammer(class CCharacter *pChr); //Returns what killstreak is active
+	void HandleGrenade();
+	void HandleRifle();
+	void HandleNinja();
 	
 	virtual void Tick();
     // add more virtual functions here if you wish

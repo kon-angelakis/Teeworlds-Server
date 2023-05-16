@@ -125,6 +125,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/laser.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.h

@@ -126,5 +126,6 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/ctf.h

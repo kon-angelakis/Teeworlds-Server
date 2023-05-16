@@ -59,6 +59,7 @@ class CEntity
 	MACRO_ALLOC_HEAP()
 
 	friend class CGameWorld;	// entity list handling
+	friend class CGameControllerMOD;
 	CEntity *m_pPrevTypeEntity;
 	CEntity *m_pNextTypeEntity;
 
