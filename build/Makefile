@@ -2749,6 +2749,30 @@ src/game/localization.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game-shared.dir/build.make CMakeFiles/game-shared.dir/src/game/localization.cpp.s
 .PHONY : src/game/localization.cpp.s
 
+src/game/server/entities/airstrike.o: src/game/server/entities/airstrike.cpp.o
+.PHONY : src/game/server/entities/airstrike.o
+
+# target to build an object file
+src/game/server/entities/airstrike.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds_srv.dir/build.make CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o
+.PHONY : src/game/server/entities/airstrike.cpp.o
+
+src/game/server/entities/airstrike.i: src/game/server/entities/airstrike.cpp.i
+.PHONY : src/game/server/entities/airstrike.i
+
+# target to preprocess a source file
+src/game/server/entities/airstrike.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds_srv.dir/build.make CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.i
+.PHONY : src/game/server/entities/airstrike.cpp.i
+
+src/game/server/entities/airstrike.s: src/game/server/entities/airstrike.cpp.s
+.PHONY : src/game/server/entities/airstrike.s
+
+# target to generate assembly for a file
+src/game/server/entities/airstrike.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds_srv.dir/build.make CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.s
+.PHONY : src/game/server/entities/airstrike.cpp.s
+
 src/game/server/entities/character.o: src/game/server/entities/character.cpp.o
 .PHONY : src/game/server/entities/character.o
 
@@ -3717,6 +3741,9 @@ help:
 	@echo "... src/game/localization.o"
 	@echo "... src/game/localization.i"
 	@echo "... src/game/localization.s"
+	@echo "... src/game/server/entities/airstrike.o"
+	@echo "... src/game/server/entities/airstrike.i"
+	@echo "... src/game/server/entities/airstrike.s"
 	@echo "... src/game/server/entities/character.o"
 	@echo "... src/game/server/entities/character.i"
 	@echo "... src/game/server/entities/character.s"

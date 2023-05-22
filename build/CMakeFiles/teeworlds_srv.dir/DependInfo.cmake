@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kostas/Desktop/Teeworlds/src/engine/server/register.cpp" "CMakeFiles/teeworlds_srv.dir/src/engine/server/register.cpp.o" "gcc" "CMakeFiles/teeworlds_srv.dir/src/engine/server/register.cpp.o.d"
   "/home/kostas/Desktop/Teeworlds/src/engine/server/server.cpp" "CMakeFiles/teeworlds_srv.dir/src/engine/server/server.cpp.o" "gcc" "CMakeFiles/teeworlds_srv.dir/src/engine/server/server.cpp.o.d"
   "/home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.cpp" "CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o" "gcc" "CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o.d"
+  "/home/kostas/Desktop/Teeworlds/src/game/server/entities/airstrike.cpp" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o" "gcc" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o.d"
   "/home/kostas/Desktop/Teeworlds/src/game/server/entities/character.cpp" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o" "gcc" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o.d"
   "/home/kostas/Desktop/Teeworlds/src/game/server/entities/flag.cpp" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/flag.cpp.o" "gcc" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/flag.cpp.o.d"
   "/home/kostas/Desktop/Teeworlds/src/game/server/entities/laser.cpp" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o" "gcc" "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o.d"

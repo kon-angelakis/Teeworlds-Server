@@ -15,6 +15,7 @@
 #include "gameworld.h"
 #include "player.h"
 
+
 #include <game/server/gamemodes/mod.h>
 
 /*
@@ -176,6 +177,7 @@ public:
 	virtual const char *GameType();
 	virtual const char *Version();
 	virtual const char *NetVersion();
+
 
 };
 

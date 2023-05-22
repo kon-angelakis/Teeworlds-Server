@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/teeworlds_srv.dir/src/engine/server/server.cpp.o.d"
   "CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o"
   "CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o.d"
+  "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o"
+  "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o.d"
   "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o"
   "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/character.cpp.o.d"
   "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/flag.cpp.o"

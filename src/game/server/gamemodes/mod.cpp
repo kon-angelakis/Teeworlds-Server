@@ -28,7 +28,8 @@ void CGameControllerMOD::Tick()
 
 void CGameControllerMOD::StatsTick()
 {
-	for(int i=0;i<MAX_CLIENTS;i++){
+	for(int i = 0; i < MAX_CLIENTS; i++)
+	{
 		if(GameServer()->IsClientReady(i) && GameServer()->m_apPlayers[i]->m_pCharacter
 			&& GameServer()->m_apPlayers[i]->m_pCharacter->IsAlive())
 		{
@@ -42,14 +43,16 @@ void CGameControllerMOD::DisplayStats(class CCharacter *pChr)
 	char aBuf[64];
 	switch (pChr->m_Killstreak)
 	{
-	case NO_KILLSTREAK:
+	case KILLSTREAK_NO:
 		if(pChr->m_DamageMult != 1) //If damage ks is active
 		{
 			str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: DAMAGE UP ACTIVE %i ", pChr->m_Health,
 														pChr->m_MaxHealth,
 														pChr->m_Armor,
 														pChr->m_MaxArmor,
-														(pChr->m_TimeToRemoveMult - Server()->Tick())/SERVER_TICK_SPEED);
+														(pChr->m_TimeToRemoveMult - Server()->Tick())/SERVER_TICK_SPEED + 1);
+			if((pChr->m_TimeToRemoveMult - Server()->Tick()) % 50 == 0)
+				PlayEmote(pChr->m_pPlayer, -1, -1, SOUND_HOOK_NOATTACH);
 			break;
 		}else
 		{
@@ -59,19 +62,19 @@ void CGameControllerMOD::DisplayStats(class CCharacter *pChr)
 														pChr->m_MaxArmor);
 			break;
 		}
-	case MEDKIT:
+	case KILLSTREAK_MEDKIT:
 		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: MEDKIT", pChr->m_Health,
 													pChr->m_MaxHealth,
 													pChr->m_Armor,
 													pChr->m_MaxArmor);
 		break;
-	case DAMAGE_UP:
+	case KILLSTREAL_DAMAGEUP:
 		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: DAMAGE UP", pChr->m_Health,
 													pChr->m_MaxHealth,
 													pChr->m_Armor,
 													pChr->m_MaxArmor);
 		break;
-	case AIRSTRIKE:
+	case KILLSTREAK_AIRSTRIKE:
 		str_format(aBuf, sizeof(aBuf), "Health: %i/%i | Armor: %i/%i\nPowerup: AIRSTRIKE", pChr->m_Health,
 													pChr->m_MaxHealth,
 													pChr->m_Armor,
@@ -98,7 +101,6 @@ void CGameControllerMOD::OnCharacterSpawn(class CCharacter *pChr)
 int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlayer *pKiller, int Weapon)
 {
 	//IGameController::OnCharacterDeath(pVictim, pKiller, Weapon);
-	
 	int mScoreToBeAdded = 0;
 	char aBufKB[64] = {}; //Killed Bounty
 	pKiller->m_pCharacter->m_bScore++;
@@ -132,7 +134,8 @@ int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlaye
 			}
 			else
 			{
-				if(pVictim->m_bScore >= 5){
+				if(pVictim->m_bScore >= 5)
+				{
 					mScoreToBeAdded = 1 + pVictim->m_bScore;
 					str_format(aBufKB, sizeof(aBufKB), "'%s' has claimed the bounty (%ix) of '%s'", Server()->ClientName(pKiller->GetCID()),
 																								pVictim->m_bScore,
@@ -144,7 +147,8 @@ int CGameControllerMOD::OnCharacterDeath(class CCharacter *pVictim, class CPlaye
 				}
 			}
 
-			if(pKiller->m_pCharacter->m_bScore%5==0){ // Announce it to all chat every %5 bounties
+			if(pKiller->m_pCharacter->m_bScore%5==0) // Announce it to all chat every %5 bounties
+			{ 
 				char aBuf[64];
 				str_format(aBuf, sizeof(aBuf), "'%s' has now a bounty of %i!", Server()->ClientName(pKiller->GetCID()), 
 																				pKiller->m_pCharacter->m_bScore);
@@ -181,8 +185,12 @@ void CGameControllerMOD::CheckForKillstreak(class CCharacter *pChr)
 	if(pChr->m_bScore % pChr->m_NextKillstreak == 0)
 	{
 		pChr->m_Killstreak++;
-		pChr->m_NextKillstreak += 5;
 
+		if(pChr->m_Killstreak > 2)
+			return;
+
+		pChr->m_NextKillstreak += 5;
+		
 		switch (pChr->m_Killstreak)
 		{
 		case 0:
@@ -200,9 +208,6 @@ void CGameControllerMOD::CheckForKillstreak(class CCharacter *pChr)
 
 	}
 
-	if(pChr->m_Killstreak > AIRSTRIKE) //No more killsteak powers
-		pChr->m_Killstreak = AIRSTRIKE;
-
 	if(aBuf != nullptr)
 		GameServer()->SendChatTarget(pChr->GetPlayer()->GetCID(), aBuf);
 }
@@ -212,30 +217,37 @@ int CGameControllerMOD::ActivatedKillstreak(class CCharacter *pChr)
 	int KillStr = pChr->m_Killstreak;
 	switch (KillStr)
 	{
-	case MEDKIT:
+	case KILLSTREAK_MEDKIT:
 		pChr->IncreaseHealth(pChr->m_MaxHealth/1.2f);
 		pChr->IncreaseArmor(4);
 		break;
-	case DAMAGE_UP:
+	case KILLSTREAL_DAMAGEUP:
 		pChr->m_DamageMult = 2;
 		pChr->m_TimeToRemoveMult = Server()->Tick() + SecondsToTick(10); //Current tick + 10 seconds
 		break;
-	case AIRSTRIKE:
-		vec2 Direction = normalize(vec2(0, AIRSTRIKE_SPEED));
-		for(int i = -AIRSTRIKE_AMOUNT/2; i <= AIRSTRIKE_AMOUNT/2; i++){
-			vec2 ProjStartPos = pChr->m_Pos + vec2(i * AIRSTRIKE_SPACING, AIRSTRIKE_HEIGHT - abs(i * AIRSTRIKE_HEIGHT));
-			CProjectile *pProj = new CProjectile(pChr->m_pGameWorld, WEAPON_GRENADE,
-					pChr->m_pPlayer->GetCID(),
-					ProjStartPos,
-					Direction,
-					(int)(Server()->TickSpeed()*GameServer()->Tuning()->m_GrenadeLifetime),
-					1, true, 0, SOUND_GRENADE_EXPLODE, WEAPON_GRENADE);
+	case KILLSTREAK_AIRSTRIKE:
+		CAirstrike *cAir = new CAirstrike(pChr->m_pGameWorld, 
+											pChr->m_pPlayer->m_ClientID, 
+											pChr->m_Pos, 
+											SecondsToTick(5), 
+											AIRSTRIKE_AMOUNT, 
+											true, true);
 
+		//Other tees are surprised
+		for(int i = 0; i < MAX_CLIENTS; i++)
+		{
+			if(GameServer()->IsClientReady(i) && GameServer()->m_apPlayers[i]->m_pCharacter
+			&& GameServer()->m_apPlayers[i]->m_pCharacter->IsAlive())
+				if(pChr->m_pPlayer->m_ClientID != i)
+					PlayEmote(GameServer()->m_apPlayers[i], 
+						EMOTICON_EXCLAMATION, 
+						EMOTE_SURPRISE, 
+						SOUND_CTF_GRAB_EN);
 		}
 		break;
 
 	}
-	//pChr->m_Killstreak = NO_KILLSTREAK; //reset
+	pChr->m_Killstreak = KILLSTREAK_NO; //reset
 	pChr->m_NextKillstreak = pChr->m_bScore + 5;
 
 	return KillStr; //return which ks was activated
@@ -244,7 +256,8 @@ int CGameControllerMOD::ActivatedKillstreak(class CCharacter *pChr)
 
 void CGameControllerMOD::KillstreakTick()
 {
-	for(int i=0;i<MAX_CLIENTS;i++){
+	for(int i = 0; i < MAX_CLIENTS; i++)
+	{
 		if(GameServer()->IsClientReady(i) && GameServer()->m_apPlayers[i]->m_pCharacter
 			&& GameServer()->m_apPlayers[i]->m_pCharacter->IsAlive()) //If character exists
 		{
@@ -260,16 +273,17 @@ void CGameControllerMOD::HandleHammer(class CCharacter *pChr)
 	char aBuf[64];
 	switch (pChr->m_Killstreak)
 	{
-	case NO_KILLSTREAK:
+	case KILLSTREAK_NO:
 		str_format(aBuf, sizeof(aBuf), "You do not have a powerup available");
+		PlayEmote(pChr->m_pPlayer, EMOTICON_DROP, EMOTE_BLINK, SOUND_TEE_CRY); //sad tee noises :(
 		break;
-	case MEDKIT:
+	case KILLSTREAK_MEDKIT:
 		str_format(aBuf, sizeof(aBuf), "You used a 'MEDKIT'!");
 		break;
-	case DAMAGE_UP:
+	case KILLSTREAL_DAMAGEUP:
 		str_format(aBuf, sizeof(aBuf), "Activated 'DAMAGE_UP'!");
 		break;
-	case AIRSTRIKE:
+	case KILLSTREAK_AIRSTRIKE:
 		str_format(aBuf, sizeof(aBuf), "You deployed an 'AIRSTRIKE'!");
 		break;
 	default:
@@ -277,8 +291,29 @@ void CGameControllerMOD::HandleHammer(class CCharacter *pChr)
 	}
 
 	GameServer()->SendChatTarget(pChr->GetPlayer()->GetCID(), aBuf);
-	if(pChr->m_Killstreak == NO_KILLSTREAK)
+	if(pChr->m_Killstreak == KILLSTREAK_NO)
 		return;
 	ActivatedKillstreak(pChr);
 
+}
+
+void CGameControllerMOD::PlayEmote(class CPlayer *pPlayer, int Emoticon, int Emote, int Sound, bool Audible)
+{
+
+	GameServer()->SendEmoticon(pPlayer->GetCID(), Emoticon);
+	pPlayer->m_pCharacter->SetEmote(Emote, Server()->Tick() + SecondsToTick(2));
+	switch (Audible)
+	{
+	case true: //Audible by everyone
+		
+		GameServer()->CreateSound(pPlayer->m_pCharacter->m_Pos, Sound);
+		break;
+	
+	case false:
+		GameServer()->CreateSound(pPlayer->m_ViewPos, Sound);
+		break;
+	}
+
+
+	
 }

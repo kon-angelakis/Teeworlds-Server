@@ -122,7 +122,7 @@ private:
 	int m_bScore = 0; //bounty score
 	int m_MaxHealth = 10;
 	int m_MaxArmor = 10;
-	int m_Killstreak = 2;
+	int m_Killstreak = -1;
 	int m_NextKillstreak = 5;
 	int m_DamageMult = 1;
 	int m_TimeToRemoveMult; //50ticks * seconds

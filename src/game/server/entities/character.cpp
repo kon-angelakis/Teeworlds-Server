@@ -340,7 +340,7 @@ void CCharacter::FireWeapon()
 				ProjStartPos,
 				Direction,
 				(int)(Server()->TickSpeed()*GameServer()->Tuning()->m_GunLifetime),
-				25, 0, 0, -1, WEAPON_GUN);
+				1, 0, 0, -1, WEAPON_GUN);
 
 			GameServer()->CreateSound(m_Pos, SOUND_GUN_FIRE);
 		} break;
@@ -401,7 +401,7 @@ void CCharacter::FireWeapon()
 
 	m_AttackTick = Server()->Tick();
 
-	if(m_aWeapons[m_ActiveWeapon].m_Ammo == -1) // -1 == unlimited
+	if(m_aWeapons[m_ActiveWeapon].m_Ammo > 0)
 		m_aWeapons[m_ActiveWeapon].m_Ammo--;
 
 	if(!m_ReloadTimer)

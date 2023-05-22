@@ -126,4 +126,5 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/airstrike.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.h

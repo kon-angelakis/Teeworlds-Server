@@ -105,12 +105,12 @@ clean: CMakeFiles/package_all.dir/clean
 CMakeFiles/md5.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5.dir/build.make CMakeFiles/md5.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5.dir/build.make CMakeFiles/md5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num= "Built target md5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=36 "Built target md5"
 .PHONY : CMakeFiles/md5.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/md5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/md5.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/md5.dir/rule
@@ -180,17 +180,17 @@ CMakeFiles/game-shared.dir/clean:
 # Target rules for target CMakeFiles/teeworlds.dir
 
 # All Build rule for target.
+CMakeFiles/teeworlds.dir/all: CMakeFiles/game-shared.dir/all
 CMakeFiles/teeworlds.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/teeworlds.dir/all: CMakeFiles/engine-shared.dir/all
-CMakeFiles/teeworlds.dir/all: CMakeFiles/game-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds.dir/build.make CMakeFiles/teeworlds.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds.dir/build.make CMakeFiles/teeworlds.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target teeworlds"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target teeworlds"
 .PHONY : CMakeFiles/teeworlds.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/teeworlds.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 66
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 68
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/teeworlds.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/teeworlds.dir/rule
@@ -208,9 +208,9 @@ CMakeFiles/teeworlds.dir/clean:
 # Target rules for target CMakeFiles/teeworlds_srv.dir
 
 # All Build rule for target.
+CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/game-shared.dir/all
 CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/engine-shared.dir/all
-CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/game-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds_srv.dir/build.make CMakeFiles/teeworlds_srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teeworlds_srv.dir/build.make CMakeFiles/teeworlds_srv.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=79,80,81,82,83,84,85,86,87,88,89,90,91,92,93 "Built target teeworlds_srv"
@@ -218,7 +218,7 @@ CMakeFiles/teeworlds_srv.dir/all: CMakeFiles/game-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/teeworlds_srv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 43
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 44
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/teeworlds_srv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/teeworlds_srv.dir/rule
@@ -240,7 +240,7 @@ CMakeFiles/mastersrv.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/mastersrv.dir/all: CMakeFiles/engine-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mastersrv.dir/build.make CMakeFiles/mastersrv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mastersrv.dir/build.make CMakeFiles/mastersrv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=35,36 "Built target mastersrv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=35 "Built target mastersrv"
 .PHONY : CMakeFiles/mastersrv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -272,7 +272,7 @@ CMakeFiles/versionsrv.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/versionsrv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/versionsrv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/versionsrv.dir/rule
@@ -299,7 +299,7 @@ CMakeFiles/crapnet.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/crapnet.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/crapnet.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/crapnet.dir/rule
@@ -326,7 +326,7 @@ CMakeFiles/dilate.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/dilate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dilate.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/dilate.dir/rule
@@ -353,7 +353,7 @@ CMakeFiles/fake_server.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fake_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fake_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/fake_server.dir/rule
@@ -380,7 +380,7 @@ CMakeFiles/map_resave.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/map_resave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/map_resave.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/map_resave.dir/rule
@@ -407,7 +407,7 @@ CMakeFiles/map_version.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/map_version.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/map_version.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/map_version.dir/rule
@@ -429,7 +429,7 @@ CMakeFiles/packetgen.dir/all: CMakeFiles/md5.dir/all
 CMakeFiles/packetgen.dir/all: CMakeFiles/engine-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/packetgen.dir/build.make CMakeFiles/packetgen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/packetgen.dir/build.make CMakeFiles/packetgen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=39,40 "Built target packetgen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=39 "Built target packetgen"
 .PHONY : CMakeFiles/packetgen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -461,7 +461,7 @@ CMakeFiles/tileset_borderadd.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tileset_borderadd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tileset_borderadd.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/tileset_borderadd.dir/rule
@@ -488,7 +488,7 @@ CMakeFiles/tileset_borderfix.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tileset_borderfix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tileset_borderfix.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/tileset_borderfix.dir/rule
@@ -515,7 +515,7 @@ CMakeFiles/tileset_borderrem.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tileset_borderrem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tileset_borderrem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/tileset_borderrem.dir/rule
@@ -542,7 +542,7 @@ CMakeFiles/tileset_borderset.dir/all: CMakeFiles/engine-shared.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tileset_borderset.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tileset_borderset.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/tileset_borderset.dir/rule
@@ -560,8 +560,8 @@ CMakeFiles/tileset_borderset.dir/clean:
 # Target rules for target CMakeFiles/tools.dir
 
 # All Build rule for target.
+CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderrem.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderset.dir/all
-CMakeFiles/tools.dir/all: CMakeFiles/crapnet.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/dilate.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/fake_server.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/map_resave.dir/all
@@ -569,7 +569,7 @@ CMakeFiles/tools.dir/all: CMakeFiles/map_version.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/packetgen.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderadd.dir/all
 CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderfix.dir/all
-CMakeFiles/tools.dir/all: CMakeFiles/tileset_borderrem.dir/all
+CMakeFiles/tools.dir/all: CMakeFiles/crapnet.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tools.dir/build.make CMakeFiles/tools.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tools.dir/build.make CMakeFiles/tools.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num= "Built target tools"
@@ -595,14 +595,10 @@ CMakeFiles/tools.dir/clean:
 # Target rules for target CMakeFiles/everything.dir
 
 # All Build rule for target.
-CMakeFiles/everything.dir/all: CMakeFiles/mastersrv.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/versionsrv.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderset.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/engine-shared.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/game-shared.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/teeworlds.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/teeworlds_srv.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/crapnet.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderrem.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderset.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/dilate.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/fake_server.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/map_resave.dir/all
@@ -610,7 +606,11 @@ CMakeFiles/everything.dir/all: CMakeFiles/map_version.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/packetgen.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderadd.dir/all
 CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderfix.dir/all
-CMakeFiles/everything.dir/all: CMakeFiles/tileset_borderrem.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/engine-shared.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/teeworlds_srv.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/mastersrv.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/versionsrv.dir/all
+CMakeFiles/everything.dir/all: CMakeFiles/crapnet.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/everything.dir/build.make CMakeFiles/everything.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/everything.dir/build.make CMakeFiles/everything.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num= "Built target everything"
@@ -640,12 +640,12 @@ CMakeFiles/package_zip.dir/all: CMakeFiles/teeworlds.dir/all
 CMakeFiles/package_zip.dir/all: CMakeFiles/teeworlds_srv.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/package_zip.dir/build.make CMakeFiles/package_zip.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/package_zip.dir/build.make CMakeFiles/package_zip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num= "Built target package_zip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=38 "Built target package_zip"
 .PHONY : CMakeFiles/package_zip.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/package_zip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 81
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 84
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/package_zip.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/package_zip.dir/rule
@@ -672,7 +672,7 @@ CMakeFiles/package_tar_gz.dir/all: CMakeFiles/teeworlds_srv.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/package_tar_gz.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 82
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 84
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/package_tar_gz.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/package_tar_gz.dir/rule
@@ -694,12 +694,12 @@ CMakeFiles/package_tar_xz.dir/all: CMakeFiles/teeworlds.dir/all
 CMakeFiles/package_tar_xz.dir/all: CMakeFiles/teeworlds_srv.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/package_tar_xz.dir/build.make CMakeFiles/package_tar_xz.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/package_tar_xz.dir/build.make CMakeFiles/package_tar_xz.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=38 "Built target package_tar_xz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num= "Built target package_tar_xz"
 .PHONY : CMakeFiles/package_tar_xz.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/package_tar_xz.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 82
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 83
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/package_tar_xz.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/package_tar_xz.dir/rule
@@ -725,7 +725,7 @@ CMakeFiles/package_default.dir/all: CMakeFiles/package_tar_xz.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/package_default.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 82
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 83
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/package_default.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/package_default.dir/rule
@@ -753,7 +753,7 @@ CMakeFiles/package_all.dir/all: CMakeFiles/package_tar_xz.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/package_all.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 83
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 85
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/package_all.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kostas/Desktop/Teeworlds/build/CMakeFiles 0
 .PHONY : CMakeFiles/package_all.dir/rule

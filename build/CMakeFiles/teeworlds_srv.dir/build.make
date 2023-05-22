@@ -181,10 +181,24 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.cpp -o CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.s
 
+CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
+CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o: ../src/game/server/entities/airstrike.cpp
+CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/entities/airstrike.cpp
+
+CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kostas/Desktop/Teeworlds/src/game/server/entities/airstrike.cpp > CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.i
+
+CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kostas/Desktop/Teeworlds/src/game/server/entities/airstrike.cpp -o CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.s
+
 CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o: ../src/game/server/entity.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/entity.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o: ../src/game/server/eventhandler.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/eventhandler.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: ../src/game/server/gamecontext.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/gamecontext.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o: ../src/game/server/gamecontroller.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/gamecontroller.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontroller.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: ../src/game/server/gamemodes/ctf.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/ctf.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/ctf.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o: ../src/game/server/gamemodes/dm.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/dm.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/dm.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: ../src/game/server/gamemodes/mod.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/mod.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/mod.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o: ../src/game/server/gamemodes/tdm.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/gamemodes/tdm.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamemodes/tdm.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o: ../src/game/server/gameworld.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/gameworld.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gameworld.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o: ../src/game/server/player.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.o -c /home/kostas/Desktop/Teeworlds/src/game/server/player.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.i: cmake_force
@@ -324,7 +338,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/player.cpp.s: cmake_force
 CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o: CMakeFiles/teeworlds_srv.dir/flags.make
 CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o: src/game/generated/server_data.cpp
 CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o: CMakeFiles/teeworlds_srv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o -MF CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o.d -o CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.o -c /home/kostas/Desktop/Teeworlds/build/src/game/generated/server_data.cpp
 
 CMakeFiles/teeworlds_srv.dir/src/game/generated/server_data.cpp.i: cmake_force
@@ -344,6 +358,7 @@ teeworlds_srv_OBJECTS = \
 "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o" \
 "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/pickup.cpp.o" \
 "CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.o" \
+"CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o" \
 "CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o" \
 "CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o" \
 "CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o" \
@@ -403,6 +418,7 @@ teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/entities/flag.cpp.o
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/entities/laser.cpp.o
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/entities/pickup.cpp.o
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/entities/projectile.cpp.o
+teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/entities/airstrike.cpp.o
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/entity.cpp.o
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/eventhandler.cpp.o
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o
@@ -454,7 +470,7 @@ teeworlds_srv: CMakeFiles/game-shared.dir/src/game/generated/nethash.cpp.o
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/build.make
 teeworlds_srv: /usr/lib/x86_64-linux-gnu/libz.so
 teeworlds_srv: CMakeFiles/teeworlds_srv.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable teeworlds_srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kostas/Desktop/Teeworlds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable teeworlds_srv"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/teeworlds_srv.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

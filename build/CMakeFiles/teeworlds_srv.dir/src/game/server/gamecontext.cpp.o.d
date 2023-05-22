@@ -126,6 +126,7 @@ CMakeFiles/teeworlds_srv.dir/src/game/server/gamecontext.cpp.o: \
  /home/kostas/Desktop/Teeworlds/src/game/server/player.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/character.h \
  /home/kostas/Desktop/Teeworlds/src/game/server/entities/projectile.h \
+ /home/kostas/Desktop/Teeworlds/src/game/server/entities/airstrike.h \
  /home/kostas/Desktop/Teeworlds/src/game/version.h \
  /home/kostas/Desktop/Teeworlds/build/src/game/generated/nethash.cpp \
  /home/kostas/Desktop/Teeworlds/src/game/collision.h \
